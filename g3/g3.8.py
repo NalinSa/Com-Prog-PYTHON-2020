@@ -1,0 +1,32 @@
+d = int(input())
+m = int(input())
+y = int(input())
+y -= 543
+a = 0
+if m >= 1:
+    a += d
+    if m >= 2:
+        a += 31
+        if m>= 3:
+            if (y%400 == 0) or (y%4 == 0 and y%100 != 0):
+                a += 1
+            a += 28
+            if m>= 4:
+                a += 31
+                if m>= 5:
+                    a += 30
+                    if m>= 6:
+                        a += 31
+                        if m >= 7:
+                            a += 30
+                            if m >= 8:
+                                a += 31
+                                if m >= 9:
+                                    a += 31
+                                    if m >= 10:
+                                        a += 30
+                                        if m >= 11:
+                                            a += 31
+                                            if m >= 12:
+                                                a += 30
+print(a)
